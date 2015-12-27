@@ -1,16 +1,10 @@
 ﻿using Microsoft.Win32;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace com.newfurniturey {
+namespace com.newfurniturey.StupidScreensaver {
 	public partial class ScreensaverForm : Form {
         #region Win32_API_functions
         [DllImport("user32.dll")]

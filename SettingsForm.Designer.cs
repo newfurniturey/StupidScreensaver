@@ -1,4 +1,4 @@
-﻿namespace com.newfurniturey {
+﻿namespace com.newfurniturey.StupidScreensaver {
 	partial class SettingsForm {
 		/// <summary>
 		/// Required designer variable.
