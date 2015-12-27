@@ -13,5 +13,23 @@ namespace com.newfurniturey {
 		public ScreensaverForm() {
 			InitializeComponent();
 		}
+
+		public ScreensaverForm(Rectangle Bounds) {
+			InitializeComponent();
+			this.Bounds = Bounds;
+		}
+
+		private void ScreensaverForm_Load(object sender, EventArgs e) {
+			Cursor.Hide();
+			TopMost = true;
+		}
+
+		private void ScreensaverForm_MouseClick(object sender, MouseEventArgs e) {
+			Application.Exit();
+		}
+
+		private void ScreensaverForm_KeyPress(object sender, KeyPressEventArgs e) {
+			Application.Exit();
+		}
 	}
 }
