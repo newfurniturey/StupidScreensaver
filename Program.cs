@@ -27,7 +27,17 @@ namespace com.newfurniturey {
 
 				} else if (firstArg == "/p") {
 					// Preview Mode
+					if (secondArg == null) {
+						MessageBox.Show(
+							"Missing the window handle =/",
+							"Stupid Screensaver",
+							MessageBoxButtons.OK, MessageBoxIcon.Exclamation
+						);
+						return;
+					}
 
+					IntPtr handle = new IntPtr(long.Parse(secondArg));
+					Application.Run(new ScreensaverForm(handle));
 				} else if (firstArg == "/s") {
 					// FullScreen Mode
 					ShowScreensaver();
