@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -63,6 +64,13 @@ namespace com.newfurniturey {
 		}
 
 		private void ScreensaverForm_Load(object sender, EventArgs e) {
+			RegistryKey key = Registry.CurrentUser.OpenSubKey("SOFTWARE\\StupidScreensaver");
+			if (key == null) {
+				textLabel.Text = "Hi mom =]";
+			} else {
+				textLabel.Text = (string)key.GetValue("text");
+			}
+
 			Cursor.Hide();
 			TopMost = true;
 		}

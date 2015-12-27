@@ -24,7 +24,7 @@ namespace com.newfurniturey {
 
 				if (firstArg == "/c") {
 					// Configuration Mode
-
+					Application.Run(new SettingsForm());
 				} else if (firstArg == "/p") {
 					// Preview Mode
 					if (secondArg == null) {
@@ -50,7 +50,7 @@ namespace com.newfurniturey {
 					);
 				}
 			} else {
-				Application.Run(new ScreensaverForm());
+				Application.Run(new SettingsForm());
 			}
 		}
 
