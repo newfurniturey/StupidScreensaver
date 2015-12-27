@@ -30,7 +30,7 @@ namespace com.newfurniturey {
 
 				} else if (firstArg == "/s") {
 					// FullScreen Mode
-					Show();
+					ShowScreensaver();
 					Application.Run();
 				} else {
 					MessageBox.Show(
@@ -44,7 +44,7 @@ namespace com.newfurniturey {
 			}
 		}
 
-		static void Show() {
+		static void ShowScreensaver() {
 			foreach (Screen screen in Screen.AllScreens) {
 				ScreensaverForm form = new ScreensaverForm(screen.Bounds);
 				form.Show();
