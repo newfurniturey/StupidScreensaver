@@ -12,6 +12,7 @@ namespace com.newfurniturey {
 	public partial class ScreensaverForm : Form {
 		private Point mouseLocation;
 		private int mouseMoveThreshold = 10;
+		private Random rand = new Random();
 
 		public ScreensaverForm() {
 			InitializeComponent();
@@ -20,6 +21,10 @@ namespace com.newfurniturey {
 		public ScreensaverForm(Rectangle Bounds) {
 			InitializeComponent();
 			this.Bounds = Bounds;
+
+			moveTimer.Interval = 3000;
+			moveTimer.Tick += new EventHandler(moveTimer_Tick);
+			moveTimer.Start();
 		}
 
 		private void ScreensaverForm_Load(object sender, EventArgs e) {
@@ -46,6 +51,11 @@ namespace com.newfurniturey {
 			}
 
 			this.mouseLocation = e.Location;
+		}
+
+		private void moveTimer_Tick(object sender, EventArgs e) {
+			textLabel.Left = rand.Next(Math.Max(1, Bounds.Width - textLabel.Width));
+			textLabel.Top = rand.Next(Math.Max(1, Bounds.Height - textLabel.Height));
 		}
 	}
 }
