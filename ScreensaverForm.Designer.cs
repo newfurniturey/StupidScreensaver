@@ -29,8 +29,11 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.Color.Black;
 			this.ClientSize = new System.Drawing.Size(284, 261);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "ScreensaverForm";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
 			this.Text = "Form1";
 			this.Load += new System.EventHandler(this.ScreensaverForm_Load);
 			this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ScreensaverForm_KeyPress);
